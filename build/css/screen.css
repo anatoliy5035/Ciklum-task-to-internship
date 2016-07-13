@@ -27,36 +27,29 @@ a {
 a:hover {
   text-decoration: none; }
 
-​
-a:visited,
+​ a:visited,
 a:active {
   outline: none; }
 
-​
-ul {
+​ ul {
   list-style: disc outside;
   padding-left: 20px; }
 
-​
-ul li {
+​ ul li {
   padding-left: 2px; }
 
-​
-ol {
+​ ol {
   list-style: decimal outside;
   padding-left: 22px; }
 
-​
-nav ol, nav ul {
+​ nav ol, nav ul {
   list-style: none;
   padding: 0; }
 
-​
-nav li {
+​ nav li {
   display: block; }
 
-​
-input,
+​ input,
 select,
 textarea {
   display: block;
@@ -66,21 +59,18 @@ textarea {
   vertical-align: top;
   box-sizing: border-box; }
 
-​
-textarea {
+​ textarea {
   resize: none;
   overflow-x: hidden;
   overflow-y: auto; }
 
-​
-sub, sup {
+​ sub, sup {
   font-size: 70%;
   line-height: 0;
   vertical-align: baseline;
   position: relative; }
 
-​
-sub {
+​ sub {
   bottom: -0.5em; }
 
 sup {
@@ -107,3 +97,486 @@ small {
 table, td {
   border-collapse: collapse;
   border-spacing: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "wf_segoe-ui_normal";
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot");
+  src: local("Segoe UI"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "wf_segoe-ui_semibold";
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.eot");
+  src: local("Segoe UI Semibold"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.svg#web") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "wf_segoe-ui_semilight";
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot");
+  src: local("Segoe UI Semilight"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.svg#web") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "shell-icons";
+  src: url("../fonts/shell-icons-0.4.0.eot");
+  src: url("../fonts/shell-icons-0.4.0.eot?#iefix") format("embedded-opentype"), url("../fonts/shell-icons-0.4.0.woff") format("woff"), url("../fonts/shell-icons-0.4.0.ttf") format("truetype"); }
+
+.nav-panel__container::after {
+  content: "";
+  overflow: hidden;
+  display: table;
+  clear: both; }
+
+.nav-panel {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  background: white;
+  color: #2F2F2F;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
+  text-rendering: auto; }
+  .nav-panel a {
+    -webkit-transition: color .1s linear;
+    -moz-transition: color .1s linear;
+    -ms-transition: color .1s linear;
+    -o-transition: color .1s linear;
+    transition: color .1s linear; }
+
+.nav-panel__container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto; }
+
+.nav-panel__brand {
+  float: left;
+  line-height: normal;
+  padding-left: 10px;
+  height: 48px; }
+
+.nav-panel__link {
+  display: block;
+  margin-top: 13px; }
+
+.nav-panel__logo {
+  display: block;
+  vertical-align: baseline;
+  max-height: 23px; }
+
+.nav-items {
+  position: absolute;
+  margin-top: 48px;
+  right: 0;
+  transition: width .3s ease-out;
+  z-index: 1000;
+  width: 0;
+  max-width: 300px;
+  height: 100%;
+  height: calc(100% - 50px);
+  display: none;
+  list-style-type: none; }
+
+.nav-items__container {
+  height: 100%; }
+
+.nav-item {
+  position: relative;
+  float: none;
+  list-style-type: none; }
+  .nav-item:hover {
+    background-color: #e5e5e5; }
+
+.nav-item__inner {
+  position: relative;
+  z-index: 1001;
+  font-size: 1em;
+  font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
+  cursor: pointer;
+  padding: 0; }
+
+.nav-item__link {
+  color: #2F2F2F;
+  font-weight: normal;
+  text-decoration: none;
+  display: block;
+  padding: 0 12px;
+  line-height: 48px;
+  transition: background-color ease-out .5s; }
+
+.nav-item__link::after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  font-family: "shell-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 21px;
+  right: 28px;
+  font-size: 6px;
+  font-weight: bold; }
+
+.user-enter {
+  line-height: 48px;
+  padding: 0 10px;
+  max-width: 160px;
+  display: inline-block;
+  vertical-align: top;
+  font-family: "Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,sans-serif;
+  font-size: 86%;
+  color: #505050;
+  float: right;
+  display: none; }
+
+.mobile-panel {
+  display: block;
+  float: right; }
+
+.mobile-panel li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+  height: 48px;
+  display: inline-block; }
+
+.mobile-menu {
+  float: right;
+  display: block; }
+
+.shell-icon-menu {
+  font-size: 1.4em;
+  position: relative;
+  bottom: 2px;
+  margin: 0 auto;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  overflow: visible;
+  font-family: "shell-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.shell-icon-menu:before {
+  content: ""; }
+
+i[class*="shell-icon-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  overflow: visible; }
+
+i[class*="shell-icon-"]:before {
+  display: block;
+  width: 1em;
+  height: 1em;
+  font-family: "shell-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.shell-icon-cart {
+  float: left;
+  top: 15px;
+  height: 48px;
+  font-size: 1.4em;
+  position: relative;
+  bottom: 2px;
+  margin: 0 auto; }
+
+.shell-icon-cart:before {
+  content: ""; }
+
+.shell-icon-search:before {
+  content: ""; }
+
+.cart-amount {
+  font-size: .75em;
+  float: left;
+  margin-left: 3px; }
+
+.mobile-menu__button {
+  width: 44px;
+  height: 48px;
+  background: 0;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
+  margin: 0;
+  min-width: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  vertical-align: inherit;
+  border: 0;
+  cursor: pointer;
+  color: #7f7f7f; }
+
+.mobile-search {
+  height: 48px;
+  line-height: 48px;
+  width: 44px;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .6em;
+  color: #7f7f7f;
+  transition: background-color .3s ease-out;
+  font-size: 20px; }
+
+.mobile-basket {
+  margin-left: 0;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .6em;
+  color: #7f7f7f;
+  line-height: 48px;
+  transition: background-color .3s ease-out; }
+
+.search-panel {
+  clear: both;
+  float: none;
+  margin: 0;
+  background-color: #f2f2f2; }
+
+.search {
+  display: none;
+  float: none;
+  padding: 1.5em 10px;
+  position: relative;
+  text-align: center; }
+
+.search__wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 70%; }
+
+.search-input {
+  float: none;
+  width: 100%;
+  height: 30px;
+  border: 0;
+  max-width: none;
+  outline: 0;
+  padding-right: 35px;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
+  margin: 0;
+  min-width: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  vertical-align: inherit; }
+
+.search-button {
+  box-sizing: border-box;
+  width: 33px;
+  height: 30px;
+  padding: 0;
+  margin-left: -4px;
+  border: 0;
+  background: #0078D7;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
+  margin: 0;
+  min-width: 0; }
+
+.shell-icon-search {
+  font-size: 1em;
+  max-width: none;
+  position: relative;
+  top: -3px; }
+
+.basket-amount {
+  font-size: .75em;
+  float: left;
+  margin-left: 3px;
+  color: #7f7f7f; }
+
+.basket-link {
+  display: inline-block;
+  height: 48px;
+  vertical-align: middle;
+  padding: 17px 10px;
+  margin-left: 6px; }
+
+.shell-icon-cart {
+  color: #7f7f7f;
+  font-size: 1em;
+  float: left; }
+
+.basket .shell-icon-cart {
+  top: 1px; }
+
+.basket {
+  display: none; }
+
+.dropdown-menu {
+  position: static;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  width: auto;
+  min-height: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.1); }
+  .dropdown-menu li {
+    list-style-type: none; }
+
+.dropdown-item a {
+  display: block;
+  min-height: 28px;
+  padding: 14px 10px;
+  line-height: 20px;
+  color: #2F2F2F;
+  font-weight: normal;
+  text-decoration: none; }
+
+.dropdown-item:hover {
+  background-color: #e5e5e5; }
+
+.shell-icon-dropdown {
+  content: "";
+  width: 1em;
+  height: 1em;
+  font-family: "shell-icons";
+  font-style: normal;
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 6px;
+  margin: 12px 16px; }
+
+.shell-icon-dropdown:before {
+  content: ""; }
+
+@media (min-width: 899px) {
+  .nav-panel__container {
+    width: 90%; }
+  .nav-panel__brand {
+    line-height: 48px;
+    padding: 0; }
+  .nav-items {
+    margin: 0 0 0 18px;
+    position: static;
+    width: auto;
+    height: auto;
+    max-width: none;
+    background-color: transparent;
+    float: left;
+    display: block; }
+  .nav-item {
+    float: left; }
+  .nav-item__link {
+    padding: 0 1.5em;
+    line-height: 48px; }
+  .nav-item__dropdown .nav-item__link::after {
+    top: 24px;
+    right: 12px;
+    position: static;
+    display: inline-block;
+    margin-left: 1.19em;
+    vertical-align: middle; }
+  .mobile-panel {
+    display: none; }
+  .mobile-menu {
+    display: none; }
+  .search-panel {
+    float: right;
+    clear: none;
+    padding: 0;
+    background-color: transparent; }
+  .basket {
+    display: inline-block;
+    top: 0;
+    padding: 0;
+    text-align: center;
+    float: left;
+    position: relative; }
+    .basket:hover {
+      background: #f2f2f2; }
+  .search {
+    display: block;
+    float: left;
+    padding: 0 5px 0 0; }
+  .search__wrapper {
+    width: auto;
+    padding: 7px 5px 0 0; }
+  .search-input {
+    float: left;
+    width: 244px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #A9A9A9;
+    border-right: 0; }
+  .search-button {
+    background-color: transparent;
+    position: static;
+    border: 1px solid #A9A9A9;
+    border-left: none;
+    height: 36px; }
+    .search-button:hover .shell-icon-search {
+      color: #0072C6; }
+  .shell-icon-search {
+    font-size: 17px;
+    color: #7f7f7f; }
+  .shell-icon-cart {
+    font-size: 17px;
+    color: #7f7f7f; }
+  .user-enter {
+    display: block;
+    cursor: pointer; }
+    .user-enter:hover {
+      background: #f2f2f2; }
+  .dropdown-menu {
+    position: absolute;
+    padding: 0 0 8px;
+    background: #f2f2f2;
+    width: 238px;
+    height: auto; }
+  .dropdown-item a {
+    padding: 17px 24px; }
+  .shell-icon-dropdown {
+    margin: 7px 3px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
