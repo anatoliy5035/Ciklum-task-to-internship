@@ -57,11 +57,11 @@
   font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
   text-rendering: auto;
   a {
-    -webkit-transition: color .1s linear;
-    -moz-transition: color .1s linear;
-    -ms-transition: color .1s linear;
-    -o-transition: color .1s linear;
-    transition: color .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
   }
 }
 
@@ -99,8 +99,7 @@
   right: 0;
   transition: width .3s ease-out;
   z-index: 1000;
-  width: 0;
-  max-width: 300px;
+  width: 300px;
   height: 100%;
   height: calc(100% - 50px);
   display: none;
@@ -116,9 +115,6 @@
   position: relative;
   float: none;
   list-style-type: none;
-  &:hover {
-    background-color: #e5e5e5;
-  }
 }
 
 .nav-item__inner {
@@ -140,7 +136,7 @@
   transition: background-color ease-out .5s;
 }
 
-.nav-item__link::after {
+.nav-item__dropdown::after {
   content: "";
   display: block;
   width: 1em;
@@ -153,7 +149,7 @@
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
   top: 21px;
-  right: 28px;
+  right: 10px;
   font-size: 6px;
   font-weight: bold;
 }
@@ -403,7 +399,7 @@ i[class*="shell-icon-"]:before {
 }
 
 .dropdown-menu {
-  //display: none;
+  display: none;
   position: static;
   z-index: 1000;
   top: 100%;
@@ -453,4 +449,42 @@ i[class*="shell-icon-"]:before {
 
 .shell-icon-dropdown:before {
   content: "";
+}
+
+.dropdown-nest {
+  >ul {
+    float: none;
+    width: auto;
+    color: #505050;
+    background-color: #d9d9d9;
+    display: none;
+    position: static;
+    top: 0;
+    left: 237px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    height: auto;
+    li {
+      &:hover {
+        background-color: #d9d9d9;
+        a {
+          text-decoration: underline;
+          }
+        }
+      }
+    }
+}
+.nav-items.active {
+  display: block;
+  background-color: #f2f2f2;
+  height: 100%;
+  overflow: auto;
+}
+
+.nav-item__inner.active {
+  background-color: #f1f1f1;
+}
+
+.nav-items__container::after {
+  @extend %clearfix;
 }
