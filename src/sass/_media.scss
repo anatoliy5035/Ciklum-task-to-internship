@@ -109,7 +109,6 @@
 
   .dropdown-menu {
     position: absolute;
-    padding: 0 0 8px;
     background: #f2f2f2;
     width: 238px;
     height: auto;
@@ -140,16 +139,97 @@
       }
     }
   }
-
-  //.nav-item__dropdown:hover .dropdown-menu {
-  //  display: block;
-  //}
   .dropdown-nest:hover>ul {
     display: block;
     padding-bottom: 8px;
   }
-  .dropdown-nest:hover .dropdown-last {
-    height: 100%
+}
+
+@media (min-width: 1201px) {
+  .herro-baner__background-container {
+    width: 1770px;
+    position: absolute;
+    left: 50%;
+    margin-left: -889px;
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 980px) {
+  .herro-baner__background-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 300px center;
+  }
+}
+
+@media (max-width: 1025px) {
+  .herro-baner__background-container {
+    background-position: 370px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+ .herro-baner-text__h1 {
+  font-size: 31px;
+  max-width: 350px;
+}
+
+  .herro-baner-text__h2 {
+    font-size: 16px;
+    max-width: 330px;
+  }
+  .try-business__button{
+    margin-top: 40px;
+  }
+  .try-business__button {
+    font-size: 16px;
+    padding: 14px 40px;
+  }
+  .herro-baner__text-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .subscription__wrap-button {
+    padding-top: 23px;
+  }
+}
+
+@media (max-width: 667px) {
+  .herro-baner__text-container {
+    padding: 0;
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .herro-baner-text {
+    width: 100%;
+  }
+  .try-business__text-footer {
+    text-align: center;
+  }
+  .subscription__wrap-input {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .subscription__button {
+    width: auto;
+  }
+  .subscription {
+    padding: 56px 0 145px;
+}
+
+  .herro-baner-text__h1, .herro-baner-text__h2 {
+    text-align: center;
+    width: 100%;
+    max-width: none;
+  }
+  .herro-baner-text__h1 {
+    font-size: 25px;
   }
 
 }
+

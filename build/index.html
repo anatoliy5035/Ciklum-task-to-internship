@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciklum internship</title>
     <link rel="stylesheet" href="css/screen.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<div class="nav-panel">
+<header class="nav-panel">
     <div class="nav-panel__container">
         <div class="nav-panel__brand">
             <a href="#" class="nav-panel__link">
@@ -55,7 +56,7 @@
                                 <a href="#" role="button">Windows
                                     <i class="shell-icon-dropdown"></i>
                                 </a>
-                                <ul class="dropdown-last">
+                                <ul>
                                     <li>
                                         <a href="#" class="dropdown-nest__item">Windows 10 Home</a>
                                     </li>
@@ -105,7 +106,7 @@
                                 <a href="#" role="button">Пристрої та Xbox
                                     <i class="shell-icon-dropdown"></i>
                                 </a>
-                                <ul class="dropdown-last">
+                                <ul>
                                     <li>
                                         <a href="#" class="dropdown-nest__item">Комп'ютерні аксесуари</a>
                                     </li>
@@ -118,7 +119,7 @@
                                 <a href="#" role="button">Для бізнесу
                                     <i class="shell-icon-dropdown"></i>
                                 </a>
-                                <ul class="dropdown-last">
+                                <ul>
                                     <li>
                                         <a href="#" class="dropdown-nest__item"> Microsoft Azure</a>
                                     </li>
@@ -149,7 +150,7 @@
                                 <a href="#" role="button">Для IT-фахівців і розробників
                                     <i class="shell-icon-dropdown"></i>
                                 </a>
-                                <ul class="dropdown-last">
+                                <ul>
                                     <li>
                                         <a href="#" class="dropdown-nest__item">Розробка програм Windows</a>
                                     </li>
@@ -168,7 +169,7 @@
                                 <a href="#" role="button">Освіта
                                     <i class="shell-icon-dropdown"></i>
                                 </a>
-                                <ul class="dropdown-last">
+                                <ul>
                                     <li>
                                         <a href="#" class="dropdown-nest__item">Освіта</a>
                                     </li>
@@ -206,6 +207,16 @@
                 </a>
             </li>
         </ul>
+        <div class="search-panel-mobile">
+            <form action="" class="search-panel-mobile__form">
+                <div class="search-panel-mobile__wrapper">
+                    <input  type="search" class="search-panel-mobile__input" placeholder="Пошук на веб-сайті Microsoft.com"/>
+                    <button class="search-panel-mobile__submit" type="submit" title="Пошук">
+                        <i class="shell-icon-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
         <div class="search-panel">
             <form action="" class="search">
                 <div class="search__wrapper">
@@ -223,8 +234,54 @@
             </div>
         </div>
     </div>
-</div>
+</header>
+<main>
+    <section class="herro-baner">
+        <div class="herro-baner__background-container"></div>
+            <div class="herro-baner__text-container">
+                <div class="herro-baner-text">
+                    <h1 class="herro-baner-text__h1">Безопасный доступ, синхронизация и совместная работа</h1>
+                    <h2 class="herro-baner-text__h2">Хранение и безопасный доступ к данным — аккаунты Dropbox Business пользуются доверием у системных администраторов и нравятся пользователям.</h2>
+                    <div class="try-business">
+                        <a href="#" class="try-business__button">Попробуйте бесплатную 30-дневную ознакомительную версию</a>
+                        <span class="try-business__text-footer">или
+                            <a class="try-business__link" href="#">купите прямо сейчас</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>
+<section class="subscription">
+    <div class="subscription__container">
+        <h2 class="subscription__title">Join over 2 million designers already using InVision. Get InVision <strong>free</strong> forever!</h2>
+        <form method="POST" class="subscription__form" action="" novalidate="novalidate">
+            <p class="subscription__wrap-input">
+                <label for="name">Your Name</label>
+                <i class="subscription__ico ico-user"></i>
+                <input type="text" name="name" id="name" value="" required >
+            </p>
+            <p class="subscription__wrap-input">
+                <label for="email">Email Address</label>
+                <i class="subscription__ico ico-email"></i>
+                <input type="email" name="email" id="email" value="" required >
+            </p>
+            <p class="subscription__wrap-input">
+                <label for="password">Create a Password</label>
+                <i class="subscription__ico ico-lock"></i>
+                <input type="password" name="password" id="password" value="" required  class="subscription__wrap-input">
+            </p>
+            <p class="subscription__wrap-button">
+                <button class="subscription__button" type="submit">Get Started — Free Forever!</button>
+            </p>
+        </form>
+        <p class="subscription__terms">By clicking "Get Started — Free Forever!" I agree to InVision's
+            <a href="#">Terms of Service.</a>
+        </p>
+    </div>
+</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
