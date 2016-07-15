@@ -4,39 +4,17 @@
   box-sizing: border-box;
 }
 
-//.container::after {
-//  @extend %clearfix;
-//}
 
 @charset "UTF-8";
-@font-face {
-  font-family: "wf_segoe-ui_normal";
-  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot");
-  src: local("Segoe UI"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
-  font-weight: normal;
-  font-style: normal
-}
-
-@font-face {
-  font-family: "wf_segoe-ui_semibold";
-  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.eot");
-  src: local("Segoe UI Semibold"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.svg#web") format("svg");
-  font-weight: normal;
-  font-style: normal
-}
-
-@font-face {
-  font-family: "wf_segoe-ui_semilight";
-  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot");
-  src: local("Segoe UI Semilight"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.svg#web") format("svg");
-  font-weight: normal;
-  font-style: normal
-}
 
 @font-face {
   font-family: "shell-icons";
-  src: url("../fonts/shell-icons-0.4.0.eot");
-  src: url("../fonts/shell-icons-0.4.0.eot?#iefix") format("embedded-opentype"), url("../fonts/shell-icons-0.4.0.woff") format("woff"), url("../fonts/shell-icons-0.4.0.ttf") format("truetype")
+  src: url("../fonts/shell-icons-0.4.0.woff") format("woff")
+}
+
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("../fonts/Myriad/myriad-set-pro_text.woff") format("woff")
 }
 
 
@@ -554,7 +532,7 @@ i[class*="shell-icon-"]:before {
   padding: 0;
   overflow: hidden;
   position: relative;
-  min-height: 700px;
+  //min-height: 700px;
   background: #f7f7f7;
   font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
 }
@@ -799,9 +777,217 @@ form input[type=password].error {
   display: inline-block;
 }
 
-.subscription__wrap-button {
+//pictures section
 
+.pictures__container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+.pictures__container::after {
+  @extend %clearfix;
+}
+.picture {
+  float: left;
+  width: 33.33333333%;
+  background: #282828;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.picture__link {
+  display: block;
+}
+
+.picture__bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  opacity: .3;
+  text-align: center;
+  transition: transform .3s, opacity .3s;
+  width: 100%;
+}
+.picture__bg:hover {
+  opacity: .8;
+  transform: scale(1.1, 1.1);
+}
+
+.picture__bg--1 {
+  background-image: url(../img/pic-1.jpg);
+}
+.picture__bg--2 {
+  background-image: url(../img/pic-2.jpg);
+}
+.picture__bg--3 {
+  background-image: url(../img/pic-3.jpg);
+}
+.picture__caption {
+  padding: 0 32px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  font: 700 22px/32px "Oculus Sans", "Arial", "Helvetica", sans-serif;
+}
+.picture__h4 {
+  color: #a4a5a6;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 16px;
+  margin: 0;
+  text-align: center;
+}
+.picture__h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+  text-align: center;
+}
+
+//footer styles
+
+.footer {
+  font-size: 12px;
+  line-height: 1.66667;
+  font-weight: 400;
+  letter-spacing: normal;
+  background-color: #f2f2f2;
+  color: #666;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.footer__container {
+  margin: 0 auto;
+  padding: 0 22px;
+  max-width: 980px;
+  box-sizing: content-box;
+}
+
+.footer-nav {
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+}
+
+.footer-nav::after {
+  @extend %clearfix;
+}
+
+.footer-nav__column {
+  width: 20%;
+  float: left;
+}
+
+.footer-nav-title {
+  font-size: 12px;
+  line-height: 1.66667;
+  font-weight: 600;
+  letter-spacing: normal;
+  color: #333;
+  margin: 0;
+}
+
+.footer-nav-list {
+  margin-right: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav-list__item {
+  display: block;
+  pointer-events: auto;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer-nav-link {
+  color: #666;
+  text-decoration: none;
+}
+
+.column-second {
+  padding-top: 20px;
+}
+
+.footer-info {
+  color: #999;
+  padding: 20px 0 24px;
+  width: 100%;
+  @extend %clearfix;
+}
+
+.footer-info__shop {
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  a {
+    color: #08c;
+  }
+}
+
+.footer-info__local {
+  float: right;
+  white-space: nowrap;
+}
+
+.local-link {
+  margin-left: 5px;
+  display: inline;
+  color: #666;
+  text-decoration: none;
+}
+
+.local-link__flag {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/flag.png");
+  padding-right: 5px;
+  background-position: left center;
+  cursor: pointer;
+  float: left;
+  margin-top: 1px;
+}
+
+.footer-copyright::after {
+  @extend %clearfix;
+}
+
+.footer-copyright__links, .footer-copyright__text {
+  margin-right: 26px;
+  float: left;
+}
+
+.footer-copyright-link {
+  border-right: 1px solid #d6d6d6;
+  margin-right: 10px;
+  padding-right: 12px;
+  white-space: nowrap;
+  color: #666;
+  text-decoration: none;
+  &:hover {
+    color: #333;
+    text-decoration: underline;
+  }
+  &:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
 
 
 

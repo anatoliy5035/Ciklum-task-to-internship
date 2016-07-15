@@ -22,6 +22,12 @@ $(document).ready(function(){
                 $(".search-panel-mobile").toggleClass("active");
             })
         }
+        if (windowsWidth <= 667) {
+            $(".footer-nav-title").on("click",function(){
+                $(this).toggleClass("active");
+                $(this).siblings(".footer-nav-list").slideToggle(150);
+            })
+        }
         else {
             $(".nav-item__dropdown").on('click',function(){
                 $(this).siblings(".nav-item__dropdown").find(".dropdown-menu").slideUp(300);
@@ -40,6 +46,7 @@ $(document).ready(function(){
                 $(this).parent().css("height","auto");
             });
         }
+
 });
 
 
@@ -53,12 +60,11 @@ $(".subscription__form input").keypress(function(){
     $(this).siblings("label").css("opacity","0.5");
 });
 
-
 $(".subscription__form").validate();
 $.validator.messages.required = '';
 $.validator.messages.email = '';
 
-//$(window).resize(function(){
-//    location.reload(true);
-//
-//});
+$(window).resize(function(){
+    location.reload(true);
+
+});

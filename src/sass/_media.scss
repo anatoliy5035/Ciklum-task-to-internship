@@ -219,7 +219,7 @@
     width: auto;
   }
   .subscription {
-    padding: 56px 0 145px;
+    padding: 56px 0 56px;
 }
 
   .herro-baner-text__h1, .herro-baner-text__h2 {
@@ -230,6 +230,68 @@
   .herro-baner-text__h1 {
     font-size: 25px;
   }
-
+  .picture {
+    width: 100%;
+  }
+  .footer {
+    min-width: 320px;
+  }
+  .footer__container {
+    padding: 0 16px;
+  }
+  .footer-nav {
+    font-size: 12px;
+    line-height: 2.5;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+  .footer-nav__column {
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    overflow: hidden;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .footer-nav-title {
+    font-size: 14px;
+    line-height: 2.78571;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+  .footer-nav-list {
+    display: none;
+  }
+  .footer-nav-link {
+    padding: 0 14px;
+    display: block;
+  }
+  .column-second {
+    border-top: 1px solid #e3e3e3;
+    padding: 0;
+  }
+  .footer-nav-title:after {
+    content: '+';
+    float: right;
+    font-weight: normal;
+    margin-right: 8px;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+  }
+  .footer-nav-title.active:after {
+    -webkit-transform: rotate(45deg) scale(1.08);
+    transform: rotate(45deg) scale(1.08);
+  }
+  .footer-info__local {
+    float: none;
+  }
+  .footer-copyright {
+    padding-top: 13px;
+  }
+  .footer-info__shop {
+    border-bottom: 0;
+  }
+  .nowrap {
+    white-space: nowrap;
+  }
 }
 
