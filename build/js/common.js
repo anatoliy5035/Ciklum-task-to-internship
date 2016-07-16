@@ -76,6 +76,10 @@ $(document).ready(function () {
         }).mouseleave(function () {
             $(this).parent().css("height", "auto");
         });
+
+        $(".dropdown-menu").mouseleave(function(){
+            $(this).css("display","none");
+        })
     }
 
     //subscribtions panel logic
