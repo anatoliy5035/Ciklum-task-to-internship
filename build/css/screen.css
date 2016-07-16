@@ -1,7 +1,13 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "shell-icons";
+  src: url("../fonts/shell-icons-0.4.0.woff") format("woff"); }
+
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("../fonts/Myriad/myriad-set-pro_text.woff") format("woff"); }
+
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body, div, h1, h2, h3, p, b, i, strong, em, strike, sub, sup, ul, ol, li,
@@ -99,17 +105,7 @@ table, td {
   border-spacing: none; }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
-@font-face {
-  font-family: "shell-icons";
-  src: url("../fonts/shell-icons-0.4.0.woff") format("woff"); }
-
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("../fonts/Myriad/myriad-set-pro_text.woff") format("woff"); }
 
 .nav-panel__container::after, .nav-items__container::after, .pictures__container::after, .footer-nav::after, .footer-info, .footer-copyright::after {
   content: "";
@@ -127,6 +123,7 @@ table, td {
   font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
   text-rendering: auto; }
   .nav-panel li {
+    -webkit-transition: background-color ease-out .3s;
     transition: background-color ease-out .3s; }
 
 .nav-panel__container {
@@ -153,11 +150,11 @@ table, td {
   position: absolute;
   margin-top: 48px;
   right: 0;
+  -webkit-transition: width .3s ease-out;
   transition: width .3s ease-out;
   z-index: 1000;
   max-width: 360px;
   width: 80%;
-  height: 100%;
   height: calc(100% - 50px);
   display: none;
   list-style-type: none; }
@@ -185,6 +182,7 @@ table, td {
   display: block;
   padding: 0 12px;
   line-height: 48px;
+  -webkit-transition: background-color ease-out .5s;
   transition: background-color ease-out .5s; }
 
 .nav-item__dropdown::after {
@@ -194,7 +192,6 @@ table, td {
   height: 1em;
   font-family: "shell-icons";
   font-style: normal;
-  font-weight: normal;
   line-height: 1.1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -208,7 +205,6 @@ table, td {
   line-height: 48px;
   padding: 0 10px;
   max-width: 160px;
-  display: inline-block;
   vertical-align: top;
   font-family: "Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,sans-serif;
   font-size: 86%;
@@ -300,9 +296,6 @@ i[class*="shell-icon-"]:before {
   font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
   margin: 0;
   min-width: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
   vertical-align: inherit;
   border: 0;
@@ -319,6 +312,7 @@ i[class*="shell-icon-"]:before {
   display: inline-block;
   padding: 0 .6em;
   color: #7f7f7f;
+  -webkit-transition: background-color .3s ease-out;
   transition: background-color .3s ease-out;
   font-size: 20px; }
 
@@ -331,6 +325,7 @@ i[class*="shell-icon-"]:before {
   padding: 0 .6em;
   color: #7f7f7f;
   line-height: 48px;
+  -webkit-transition: background-color .3s ease-out;
   transition: background-color .3s ease-out; }
 
 .search-panel {
@@ -366,9 +361,6 @@ i[class*="shell-icon-"]:before {
   font-family: "Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
   margin: 0;
   min-width: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
   vertical-align: inherit; }
 
@@ -377,7 +369,6 @@ i[class*="shell-icon-"]:before {
   width: 33px;
   height: 30px;
   padding: 0;
-  margin-left: -4px;
   border: 0;
   background: #0078D7;
   cursor: pointer;
@@ -486,8 +477,7 @@ i[class*="shell-icon-"]:before {
 .nav-items.active {
   display: block;
   background-color: #f2f2f2;
-  height: 100%;
-  overflow: auto; }
+  height: 100%; }
 
 .nav-item__inner.active {
   background-color: #f1f1f1; }
@@ -576,6 +566,7 @@ i[class*="shell-icon-"]:before {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .herro-baner-text__h1 {
@@ -679,8 +670,6 @@ i[class*="shell-icon-"]:before {
   width: 100%;
   height: 63px;
   line-height: 1em;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding-left: 48px;
   margin-right: 10px;
@@ -705,8 +694,6 @@ i[class*="shell-icon-"]:before {
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
-  -moz-transition: background 0.3s;
-  -o-transition: background 0.3s;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   height: 62px;
@@ -722,7 +709,7 @@ i[class*="shell-icon-"]:before {
   height: 24px;
   width: 24px;
   background-repeat: no-repeat;
-  background-image: url("../img/global-s116e8c6936.png"); }
+  background-image: url("../img/sprite.png"); }
 
 .ico-user {
   background-position: 0 -85px; }
@@ -785,11 +772,14 @@ form input[type=password].error {
   height: 300px;
   opacity: .3;
   text-align: center;
+  -webkit-transition: -webkit-transform .3s, opacity .3s;
   transition: transform .3s, opacity .3s;
   width: 100%; }
 
 .picture__bg:hover {
   opacity: .8;
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1); }
 
 .picture__bg--1 {
@@ -805,6 +795,8 @@ form input[type=password].error {
   padding: 0 32px;
   position: absolute;
   top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   width: 100%;
   font: 700 22px/32px "Oculus Sans", "Arial", "Helvetica", sans-serif; }
@@ -1022,12 +1014,12 @@ form input[type=password].error {
   .shell-icon-dropdown {
     margin: 7px 3px;
     -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
     transform: rotate(-90deg); }
   .dropdown-nest > ul {
     overflow: hidden;
     background-color: #e5e5e5;
     float: left;
-    overflow: hidden;
     position: absolute;
     width: 300px;
     z-index: 2;
@@ -1137,6 +1129,7 @@ form input[type=password].error {
     transition: transform .3s ease; }
   .footer-nav-title.active:after {
     -webkit-transform: rotate(45deg) scale(1.08);
+    -ms-transform: rotate(45deg) scale(1.08);
     transform: rotate(45deg) scale(1.08); }
   .footer-info__local {
     float: none; }

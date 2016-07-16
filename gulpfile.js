@@ -2,7 +2,7 @@
 
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
-    prefixer = require('gulp-autoprefixer'),
+    autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = sass = require('gulp-sass'),
     spritesmith  = require('gulp.spritesmith'),
@@ -80,6 +80,15 @@ gulp.task('js:build', function () {
         //.pipe(sourcemaps.wborite()) 
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
+});
+
+gulp.task('autoprefixer', function () {
+    return gulp.src('build/css/**/*.css')
+        .pipe(autoprefixer({
+            browsers: ['last 3 version', "> 1%", "ie 8", "ie 7"],
+            cascade: false
+        }))
+        .pipe(gulp.dest('build/css/'));
 });
 
 //sass

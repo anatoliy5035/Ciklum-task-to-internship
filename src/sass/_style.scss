@@ -4,27 +4,13 @@
   box-sizing: border-box;
 }
 
-
-@charset "UTF-8";
-
-@font-face {
-  font-family: "shell-icons";
-  src: url("../fonts/shell-icons-0.4.0.woff") format("woff")
-}
-
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("../fonts/Myriad/myriad-set-pro_text.woff") format("woff")
-}
-
-
 %clearfix {
   content: "";
   overflow: hidden;
   display: table;
   clear: both;
 }
-
+// header styles
 .nav-panel {
   box-shadow: 0 1px 0 rgba(0,0,0,0.1);
   font-size: 15px;
@@ -75,7 +61,6 @@
   z-index: 1000;
   max-width: 360px;
   width: 80%;
-  height: 100%;
   height: calc(100% - 50px);
   display: none;
   list-style-type: none;
@@ -118,7 +103,6 @@
   height: 1em;
   font-family: "shell-icons";
   font-style: normal;
-  font-weight: normal;
   line-height: 1.1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -133,7 +117,6 @@
   line-height: 48px;
   padding: 0 10px;
   max-width: 160px;
-  display: inline-block;
   vertical-align: top;
   font-family: "Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,sans-serif;
   font-size: 86%;
@@ -323,7 +306,7 @@ i[class*="shell-icon-"]:before {
   width: 33px;
   height: 30px;
   padding: 0;
-  margin-left: -4px;
+  //margin-left: -4px;
   border: 0;
   background: #0078D7;
   cursor: pointer;
@@ -453,7 +436,6 @@ i[class*="shell-icon-"]:before {
   display: block;
   background-color: #f2f2f2;
   height: 100%;
-  overflow: auto;
 }
 
 .nav-item__inner.active {
@@ -728,7 +710,7 @@ i[class*="shell-icon-"]:before {
   height: 24px;
   width: 24px;
   background-repeat: no-repeat;
-  background-image: url('../img/global-s116e8c6936.png');
+  background-image: url('../img/sprite.png');
 }
 
 .ico-user {
